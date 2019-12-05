@@ -1,0 +1,33 @@
+https://www.codechef.com/ide
+
+/* package codechef; // don't place package name! */
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.stream.Collectors;
+
+/* Name of the class has to be "Main" only if the class is public. */
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		System.out.println("Nagaraj");
+		Map<Integer, String> map = new HashMap<>();
+    map.put(1, "linode.com1");
+    map.put(1, "linode.com2");
+    map.put(2, "heroku.com");
+    Integer one = 1;
+//Map -> Stream -> Filter -> String
+	String result = map.entrySet()
+	                .stream()
+	                .filter(x -> one == x.getKey())
+	                .map(x->x.getValue())
+	                .collect(Collectors.joining());
+
+	                //.collect(Collectors.joining());
+	    System.out.println("result=" + result);            
+	}
+}
